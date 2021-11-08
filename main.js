@@ -45,6 +45,6 @@ switch (numero) {
         alert( numero +" es incorrecto");
         break;
     case "10":
-        alert( numero +" es incorrecto");
+        alert( numero +" es incorrect");
         break;
 }
