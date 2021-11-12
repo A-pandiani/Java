@@ -1,17 +1,24 @@
-
-
-let tablaIngreso = parseInt(prompt("Ingrese el numero de tabla que desea ver"));
-for (let i = 0; i <= 10; i++) {
-    console.log(tablaIngreso + " x " + i + "=" + tablaIngreso*i);
-    
+let primerNum = parseInt(prompt("primer numero: "));
+let segundoNum = parseInt(prompt("segundo numero: "));
+let operacion = prompt("que operacion deseas hacer?");
+function calculadora(primerNum, segundoNum, operacion) {
+    switch (operacion) {
+        case "suma":
+            return primerNum + segundoNum;
+            break;
+        case "resta":
+            return primerNum - segundoNum;
+            break;
+        case "multiplicacion":
+            return primerNum * segundoNum;
+            break;
+        case "division":
+            return primerNum / segundoNum;
+            break;
+        
+    }
 }
-let palabraClaveIngresada = prompt("Ingrese la contraseña")
 
-let intentos = 1;
-const contraseña = "admin1234"
-while (palabraClaveIngresada != contraseña)  {
-    palabraClaveIngresada = prompt(" ERROR: Ingrese la contraseña");
-    intentos++;
-   
-}
-alert("Bienvenido, intentos realizados: " + intentos);
+
+
+alert(calculadora( primerNum, segundoNum,operacion));
