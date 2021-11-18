@@ -1,19 +1,40 @@
-class Producto{
-    constructor(marca, nombre, precio, moneda,){
-        this.marca = marca;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.moneda = moneda;
-        this.precioEnvio = 200;
-    }
+const fernet = 800;
+const coca = 200;
+const hielo = 200;
+const vodka = 700;
+const speed = 300;
 
-    cuantoQuedoConIva(){
-      return(this.precio *1.21);
-    }
-    cuantoQuedaConEnvio(){
-        return this.moneda+(this.cuantoQuedoConIva() + this.precioEnvio);
-    }
+
+
+
+let respuestaClave = prompt("Quiere fernet o vodka?") 
+
+function sumarFernet(fernet,coca,hielo) {
+    const resultado = (fernet + coca + hielo)
+    
+    return resultado
+   
 }
-const Fernet = new Producto("Branca", "Fernet", 1000, "$")
-console.log(Fernet.cuantoQuedoConIva());
-console.log(Fernet.cuantoQuedaConEnvio());
+
+
+function sumarVodkas(vodka,speed,hielo){
+ const resultadoUno = (vodka + speed + hielo)
+  return resultadoUno
+   
+}
+
+
+
+
+
+if(respuestaClave == "fernet" ){
+    alert("El total es $"+sumarFernet(fernet,coca,hielo));
+}
+
+
+   
+
+else{ respuestaClave == "vodka"
+
+    alert("El total es $"+sumarVodkas(vodka,coca,hielo));
+}
